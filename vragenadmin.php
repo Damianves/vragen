@@ -1,5 +1,6 @@
 <?php  
 require_once 'select.php';
+require_once "check.php";
 
 
 ?>
@@ -8,7 +9,7 @@ require_once 'select.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vragen</title>
+	<title>Vragen admin</title>
 	<link rel="stylesheet" type="text/css" href="vraag.css">
 </head>
 <body>
@@ -37,7 +38,8 @@ require_once 'select.php';
 			<th>Voornaam</th>
 			<th>Achternaam</th>
 			<th>Antwoord</th>
-			
+			<th>link</th>
+			<th>delete</th>
 		</tr>
 	</thead>
 <?php
@@ -49,7 +51,8 @@ require_once 'select.php';
 		<td><?php echo $question['firstname'];?></td>
 		<td><?php echo $question['lastname'];?></td>
 		<td><?php echo $question['answer'];?></td>
-		<!--<td><a href="ba.php?id=<?=$question['id']?>">vraag beantwoorden</a></td>-->
+		<td><a href="ba.php?id=<?=$question['id']?>">vraag beantwoorden</a></td>
+		<td><a href="delete.php?id=<?$question['id']?>">vraag verwijderen</a></td>
 					
 	</tr>	
 	

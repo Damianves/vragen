@@ -1,18 +1,17 @@
 <?php
-	$name = $_GET['name'];
-	$username = $_GET['username'];
-	$password = $_GET['password'];
+	$name = $_POST['name'];
+	$username = $_POST['username'];
+	$password = $_POST['password'];
 	$logname='visitor1';
 	$pass='test';
 	?>
 	<?php
 	if ($username==$logname and $password==$pass) {
-		$view='good';
-		$frame='ok';
+		header('Location: http://localhost/vragen/vragenadmin.php');
+		$admin="true";
 	}
 	else
 	{
-		$view='false';
-		$frame='notok';
+		$failed="Gebruikersnaam of wachtwoord is onjuist";
 	}
 ?>

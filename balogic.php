@@ -14,7 +14,7 @@
 		
 		$sql = "UPDATE vraag SET answer = '$answer' WHERE id = $id";
 		$result = $connection->query($sql);
-		header('Location: http://localhost/vragen/home.php');
+		header('Location: http://localhost/vragen/vragenadmin.php');
 	}
 
 	
